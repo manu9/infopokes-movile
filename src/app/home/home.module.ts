@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
+import { CardPokemonComponent } from './card-pokemon/card-pokemon.component';
+import { DetallePokemonComponent } from './detalle-pokemon/detalle-pokemon.component';
 
 
 @NgModule({
@@ -12,8 +14,8 @@ import { HomePageRoutingModule } from './home-routing.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
   ],
-  declarations: [HomePage]
+  declarations: [HomePage, CardPokemonComponent, DetallePokemonComponent]
 })
 export class HomePageModule {}

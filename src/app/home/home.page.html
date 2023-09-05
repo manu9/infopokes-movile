@@ -3,43 +3,23 @@
     <ion-title>INFOPOKES</ion-title>
   </ion-toolbar>
   <ion-toolbar>
-    <ion-searchbar color="Light" placeholder="Buscar Pokemon"></ion-searchbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-searchbar color="medium" placeholder="Buscar Pokemon" [(ngModel)]="searchTerm" (keydown.enter)="buscarPokemon()" ></ion-searchbar>
+        </ion-col>
+        <ion-col size="auto">
+          <ion-button size="small" (click)="reset()">Reset</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+
   </ion-toolbar>
 </ion-header>
 
 
 <ion-content [fullscreen]="true">
-  <ion-card>
-    <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-    <ion-card-header>
-      <ion-card-title>Card Title</ion-card-title>
-      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-    </ion-card-header>
-
-    <ion-card-content>
-      Here's a small text description for the card content. Nothing more, nothing less.
-    </ion-card-content>
-  </ion-card>
-  <ion-card>
-    <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-    <ion-card-header>
-      <ion-card-title>Card Title</ion-card-title>
-      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-    </ion-card-header>
-
-    <ion-card-content>
-      Here's a small text description for the card content. Nothing more, nothing less.
-    </ion-card-content>
-  </ion-card>
-  <ion-card>
-    <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-    <ion-card-header>
-      <ion-card-title>Card Title</ion-card-title>
-      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-    </ion-card-header>
-
-    <ion-card-content>
-      Here's a small text description for the card content. Nothing more, nothing less.
-    </ion-card-content>
-  </ion-card>
+  <card-pokemon class="cardPokemon" *ngFor="let pokemon of listaPokemon" [data]="pokemon">
+  </card-pokemon>
 </ion-content>

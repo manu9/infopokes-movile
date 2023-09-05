@@ -1,0 +1,22 @@
+.containerDetails{
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.imgPoke{
+  width: 200px;
+}
+
+.btnVolver{
+  width: 100px;
+  height: 30px;
+  margin-left: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  background-color: coral;
+  cursor: pointer;
+  border: none;
+}

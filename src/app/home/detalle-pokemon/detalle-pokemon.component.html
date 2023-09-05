@@ -1,0 +1,20 @@
+<section class="containerDetails">
+  <div class="pokeImg">
+    <img *ngIf="detallePokemon.id" class="imgPoke" src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/{{detallePokemon.id}}.svg' alt="Avatar">
+  </div>
+  <div class="attribute">
+    <ul>
+      <li><span><b>Id:</b> {{detallePokemon.id}}</span></li>
+      <li><span><b>Tipo:</b> {{detallePokemon.type | titlecase}}</span></li>
+      <li><span><b>Nombre:</b> {{detallePokemon.name | titlecase}}</span></li>
+      <li><span><b>Peso:</b> {{detallePokemon.weight}}</span></li>
+      <li><span><b>Experiencia Base:</b> {{detallePokemon.base_experience}}</span></li>
+      <li><span><b>Altura:</b> {{detallePokemon.height}}</span></li>
+      <li><span><b>Habilidad:</b> {{detallePokemon.ability | titlecase}}</span></li>
+      <li><span><b>Vida:</b> {{detallePokemon.hp}}</span></li>
+      <li><span><b>Ataque:</b> {{detallePokemon.attack | titlecase}}</span></li>
+      <li><span><b>Defensa:</b> {{detallePokemon.defense | titlecase}}</span></li>
+    </ul>
+    <button class="btnVolver" routerLink="/home">Volver</button>
+  </div>
+</section>
